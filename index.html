@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweep Las Vegas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0e0e0e]">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside
+      class="w-[313px] h-[1062px] bg-gradient-to-b from-[#2a0a3c] to-[#3d022a] flex flex-col items-center py-6 px-3 sticky top-0 z-40 shadow-2xl opacity-100"
+      style="background: linear-gradient(180deg,  rgba(253, 184, 3, 0) 100%), #200226 52.98%, #48001D 0%;">
+      <!-- Logo -->
+      <div class="flex flex-col items-center mb-6 w-full">
+        <img src="/images/capture.png" alt="Sweep Las Vegas Logo"
+          class="w-[180px] h-[180px] object-contain mx-auto mb-2" />
+      </div>
+      <!-- Search -->
+      <div class="relative w-full mb-5">
+        <div class="flex items-center bg-[#3d1a5a] rounded-lg px-3 py-2">
+          <img src="/images/icons/Search.svg" alt="Search" class="h-5 w-5 mr-3" />
+          <input type="text" placeholder="Search Games"
+            class="bg-transparent text-white placeholder-gray-300 focus:outline-none w-full" />
+        </div>
+      </div>
+      <!-- Game Categories -->
+      <div class="grid grid-cols-2 gap-4 w-full mb-6">
+        <!-- Live Winners -->
+        <button
+          class="flex flex-col items-center justify-center rounded-xl shadow-lg border border-[#a86b2d] hover:scale-105 transition"
+          style="width:130px; height:97px; opacity:1; background: linear-gradient(180deg, #220219 0%, #4B0257 100%);">
+          <img src="/images/icons/game-category-1.svg" alt="Live Winners" class="w-[30px] h-[30px] mb-[5px]" />
+          <span class="text-[18px] text-white font-medium text-center leading-tight">Live Winners</span>
+        </button>
+        <!-- Live Casino -->
+        <button
+          class="flex flex-col items-center justify-center rounded-xl shadow-lg border border-[#a86b2d] hover:scale-105 transition"
+          style="width:130px; height:97px; opacity:1; background: linear-gradient(180deg, #220219 0%, #4B0257 100%);">
+          <img src="/images/icons/game-category-2.svg" alt="Live Casino" class="w-[90px] h-[30px] mb-[5px]" />
+          <span class="text-[18px] text-white font-medium text-center leading-tight">Live Casino</span>
+        </button>
+        <!-- New Games -->
+        <button
+          class="flex flex-col items-center justify-center rounded-xl shadow-lg border border-[#a86b2d] hover:scale-105 transition"
+          style="width:130px; height:97px; opacity:1; background: linear-gradient(180deg, #220219 0%, #4B0257 100%);">
+          <img src="/images/icons/game-category-3.svg" alt="New Games" class="w-[90px] h-[30px] mb-[5px]" />
+          <span class="text-[18px] text-white font-medium text-center leading-tight">New Games</span>
+        </button>
+        <!-- Slots -->
+        <button
+          class="flex flex-col items-center justify-center rounded-xl shadow-lg border border-[#a86b2d] hover:scale-105 transition"
+          style="width:130px; height:97px; opacity:1; background: linear-gradient(180deg, #220219 0%, #4B0257 100%);">
+          <img src="/images/icons/game-category-4.svg" alt="Slots" class="w-[90px] h-[30px] mb-[5px]" />
+          <span class="text-[18px] text-white font-medium text-center leading-tight">Slots</span>
+        </button>
+        <!-- Popular Games -->
+        <button
+          class="flex flex-col items-center justify-center rounded-xl shadow-lg border border-[#a86b2d] hover:scale-105 transition"
+          style="width:130px; height:97px; opacity:1; background: linear-gradient(180deg, #220219 0%, #4B0257 100%);">
+          <img src="/images/icons/game-category-5.svg" alt="Popular Games" class="w-[90px] h-[30px] mb-[5px]" />
+          <span class="text-[18px] text-white font-medium text-center leading-tight">Popular Games</span>
+        </button>
+        <!-- Jackpot Play -->
+        <button
+          class="flex flex-col items-center justify-center rounded-xl shadow-lg border border-[#a86b2d] hover:scale-105 transition"
+          style="width:130px; height:97px; opacity:1; background: linear-gradient(180deg, #220219 0%, #4B0257 100%);">
+          <img src="/images/icons/game-category-6.svg" alt="Jackpot Play" class="w-[90px] h-[30px] mb-[5px]" />
+          <span class="text-[18px] text-white font-medium text-center leading-tight">Jackpot Play</span>
+        </button>
+        <!-- Top Games -->
+        <button
+          class="flex flex-col items-center justify-center rounded-xl shadow-lg border border-[#a86b2d] hover:scale-105 transition"
+          style="width:130px; height:97px; opacity:1; background: linear-gradient(180deg, #220219 0%, #4B0257 100%);">
+          <img src="/images/icons/game-category-7.svg" alt="Top Games" class="w-[90px] h-[30px] mb-[5px]" />
+          <span class="text-[18px] text-white font-medium text-center leading-tight">Top Games</span>
+        </button>
+        <!-- Classic Games -->
+        <button
+          class="flex flex-col items-center justify-center rounded-xl shadow-lg border border-[#a86b2d] hover:scale-105 transition"
+          style="width:130px; height:97px; opacity:1; background: linear-gradient(180deg, #220219 0%, #4B0257 100%);">
+          <img src="/images/icons/game-category-8.svg" alt="Classic Games" class="w-[90px] h-[30px] mb-[5px]" />
+          <span class="text-[18px] text-white font-medium text-center leading-tight">Classic Games</span>
+        </button>
+      </div>
+      <!-- Bottom Buttons -->
+      <div class="w-full flex flex-col gap-3 mt-auto">
+        <button
+          class="flex items-center bg-[#4b0042] px-4 py-3 rounded-lg text-white font-semibold shadow hover:bg-[#72004e] transition">
+          <img src="/images/icons/gift.svg" alt="Promotion" class="w-6 h-6 mr-2" />
+          Promotion
+        </button>
+        <button
+          class="flex items-center bg-[#4b0042] px-4 py-3 rounded-lg text-white font-semibold shadow hover:bg-[#72004e] transition">
+          <img src="/images/icons/shopping-cart.svg" alt="Buy" class="w-6 h-6 mr-2" />
+          Buy
+        </button>
+        <button
+          class="flex items-center bg-[#4b0042] px-4 py-3 rounded-lg text-white font-semibold shadow hover:bg-[#72004e] transition">
+          <img src="/images/icons/gift.svg" alt="Redeem" class="w-6 h-6 mr-2" />
+          Redeem
+        </button>
+        <button
+          class="flex items-center bg-[#4b0042] px-4 py-3 rounded-lg text-white font-semibold shadow hover:bg-[#72004e] transition">
+          <img src="/images/icons/spin-wheel.svg" alt="Spin Wheel" class="w-6 h-6 mr-2" />
+          Spin Wheel
+        </button>
+      </div>
+    </aside>
+    <!-- Main Content Area -->
+    <div class="flex-1 flex flex-col min-h-screen bg-gradient-to-br from-[#3d022a] to-[#a84e1c]">
+      <!-- Navbar for main content only -->
+      <nav class="w-full flex items-center px-6 py-3 mb-6"
+        style="background: linear-gradient(90deg, #460871 0%, #460628 100%);">
+        <!-- Home Button -->
+        <button
+          class="flex items-center px-6 py-2 rounded-lg font-semibold text-white mr-6 bg-gradient-to-r from-[#ff9900] to-[#ff4e50] shadow hover:scale-105 transition">
+          🏡 Home
+        </button>
+        <!-- Search Bar -->
+        <div class="flex items-center bg-[#7d2597] bg-opacity-80 rounded-lg px-5 py-2 flex-1 max-w-[500px] mr-6">
+          <img src="/images/icons/Search.svg" alt="Search" class="h-5 w-5 mr-3 text-white" />
+          <input type="text" placeholder="Search game provider and Game Categories"
+            class="bg-transparent text-white placeholder-white focus:outline-none w-full text-[15px]" />
+        </div>
+        <!-- Login Button -->
+        <button
+          class="ml-auto mr-4 px-7 py-2 rounded-full font-semibold text-yellow-400 border border-yellow-400 hover:bg-yellow-400 hover:text-[#460628] transition shadow"
+          style="box-shadow: 0 0 0 2px #2bff00;">
+          Login
+        </button>
+        <!-- Sign Up Button -->
+        <button
+          class="px-7 py-2 rounded-full font-semibold text-white bg-gradient-to-r from-[#ff9900] to-[#ff4e50] shadow hover:scale-105 transition flex items-center">
+          Sign Up 😊
+          </svg>
+        </button>
+      </nav>
+      <!-- Main content goes here -->
+      <!-- Banners Section -->
+      <div class="flex gap-6 px-6 mb-8 w-full">
+        <!-- Banner 1 -->
+        <div class="flex-1 relative rounded-2xl overflow-hidden shadow-lg" style="min-width:0;">
+          <img src="/images/banner_1/banner.jpg" alt="Spin the Wheel Banner" class="w-full h-[300px] object-cover" />
+          <div
+            class="absolute inset-0 flex flex-col justify-center items-start p-8 bg-gradient-to-r from-black/60 to-transparent">
+            <h2 class="text-white text-3xl font-extrabold mb-2 drop-shadow-lg">SPIN THE WHEEL<br>&amp; WIN BIG! <span
+                class="ml-2">🎉</span></h2>
+            <p class="text-[#ff4e50] text-lg font-bold mb-1 drop-shadow">Play for Free</p>
+            <p class="text-yellow-400 text-lg font-semibold mb-4 drop-shadow">No Deposit Needed!</p>
+            <button
+              class="px-8 py-2 rounded-full font-semibold text-white bg-gradient-to-r from-[#ff9900] to-[#ff4e50] shadow hover:scale-105 transition text-lg">
+              Sign Up
+            </button>
+          </div>
+        </div>
+        <!-- Banner 2 -->
+        <div class="flex-1 relative rounded-2xl overflow-hidden shadow-lg" style="min-width:0;">
+          <img src="/images/banner_2/background.jpg" alt="Play Slots Free Banner"
+            class="w-full h-[300px] object-cover" />
+          <div
+            class="absolute inset-0 flex flex-col justify-center items-start p-8 bg-gradient-to-r from-black/60 to-transparent">
+            <h2 class="text-white text-3xl font-extrabold mb-2 drop-shadow-lg">PLAY SLOTS FREE</h2>
+            <p class="text-yellow-400 text-lg font-semibold mb-1 drop-shadow">No Deposit Needed!</p>
+            <p class="text-white text-base font-medium mb-4 drop-shadow">Jackpots. Bonuses. Endless Fun.</p>
+            <button
+              class="flex items-center px-8 py-2 rounded-full font-semibold text-white bg-gradient-to-r from-[#ff9900] to-[#ff4e50] shadow hover:scale-105 transition text-lg">
+              <svg class="w-5 h-5 mr-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.561-.955L10 0l2.951 5.955 6.561.955-4.756 4.635 1.122 6.545z" />
+              </svg>
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sweep Las Vegas Offers Section -->
+      <div class="w-full mb-10">
+        <div class="flex items-center mb-4 px-6">
+          <img src="/images/icons/gift.svg" alt="Offers" class="w-6 h-6 mr-2" />
+          <h3 class="text-white text-xl font-semibold">Sweep Las Vegas Offers</h3>
+        </div>
+        <div class="w-full flex gap-6 overflow-x-auto pb-2 px-6">
+          <!-- Welcome Bonus -->
+          <div class="flex flex-col items-center min-w-[200px]">
+            <div
+              class="rounded-2xl overflow-hidden shadow-lg w-[160px] h-[160px] bg-[#2a0a3c] flex items-center justify-center">
+              <img src="/images/offer_sections/pic_1.png" alt="Welcome Bonus" class="object-cover w-full h-full" />
+            </div>
+            <div class="mt-2 bg-gradient-to-r from-[#ff9900] to-[#ff4e50] px-4 py-1 rounded-full">
+              <span class="text-white font-semibold text-sm">Welcome Bonus</span>
+            </div>
+          </div>
+          <!-- Weekly Bonus -->
+          <div class="flex flex-col items-center min-w-[200px]">
+            <div
+              class="rounded-2xl overflow-hidden shadow-lg w-[160px] h-[160px] bg-[#2a0a3c] flex items-center justify-center">
+              <img src="/images/offer_sections/pic_2.jpg" alt="Weekly Bonus" class="object-cover w-full h-full" />
+            </div>
+            <div class="mt-2 bg-gradient-to-r from-[#ff9900] to-[#ff4e50] px-4 py-1 rounded-full">
+              <span class="text-white font-semibold text-sm">Weekly Bonus</span>
+            </div>
+          </div>
+          <!-- Monthly Bonus -->
+          <div class="flex flex-col items-center min-w-[200px] rounded-2xl">
+            <div
+              class="rounded-2xl overflow-hidden shadow-lg w-[160px] h-[160px] bg-[#2a0a3c] flex items-center justify-center">
+              <img src="/images/offer_sections/pic_3.png" alt="Monthly Bonus" class="object-cover w-full h-full" />
+            </div>
+            <div class="mt-2 bg-gradient-to-r from-[#ff9900] to-[#ff4e50] px-4 py-1 rounded-full">
+              <span class="text-white font-semibold text-sm">Monthly Bonus</span>
+            </div>
+          </div>
+          <!-- Promotions -->
+          <div class="flex flex-col items-center min-w-[200px]">
+            <div
+              class="relative rounded-2xl overflow-hidden shadow-lg w-[160px] h-[160px] bg-[#2a0a3c] flex items-center justify-center">
+              <img src="/images/offer_sections/pic_4.jpg" alt="Promotions" class="object-cover w-full h-full" />
+              <span
+                class="absolute top-2 right-2 bg-[#ff4e50] text-white text-xs font-bold px-2 py-0.5 rounded-full">50%
+                Off</span>
+            </div>
+            <div class="mt-2 bg-gradient-to-r from-[#ff9900] to-[#ff4e50] px-4 py-1 rounded-full">
+              <span class="text-white font-semibold text-sm">Promotions</span>
+            </div>
+          </div>
+          <!-- VIP Club -->
+          <div class="flex flex-col items-center min-w-[200px]">
+            <div
+              class="rounded-2xl overflow-hidden shadow-lg w-[160px] h-[160px] bg-[#2a0a3c] flex items-center justify-center">
+              <img src="/images/offer_sections/pic_5.jpg" alt="VIP Club" class="object-cover w-full h-full" />
+            </div>
+            <div class="mt-2 bg-gradient-to-r from-[#ff9900] to-[#ff4e50] px-4 py-1 rounded-full">
+              <span class="text-white font-semibold text-sm">VIP Club</span>
+            </div>
+          </div>
+          <!-- Live Casino -->
+          <div class="flex flex-col items-center min-w-[200px]">
+            <div
+              class="rounded-2xl overflow-hidden shadow-lg w-[160px] h-[160px] bg-[#2a0a3c] flex items-center justify-center">
+              <img src="/images/offer_sections/pic_6.jpg" alt="Live Casino" class="object-cover w-full h-full" />
+            </div>
+            <div class="mt-2 bg-gradient-to-r from-[#ff9900] to-[#ff4e50] px-4 py-1 rounded-full">
+              <span class="text-white font-semibold text-sm">Live Casino</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sweep Las Vegas Live Casino & Offers Details Section -->
+      <div class="flex gap-6 px-6 mb-10 w-full">
+        <!-- Live Casino Card -->
+        <div
+          class="flex-1 relative rounded-2xl overflow-hidden shadow-lg bg-[#2a0a3c] flex flex-col items-center justify-end">
+          <img src="/images/banner 4.jpg" alt="Sweep Las Vegas Live Casino"
+            class="absolute inset-0 w-full h-[500px] object-cover z-0" style="opacity:0.6" />
+          <div class="relative z-10 flex flex-col items-center justify-top h-[500px] p-8">
+            <h2 class="text-yellow-400 text-2xl font-extrabold shadow-2xl mb-2 text-center drop-shadow-lg uppercase">
+              SWEEP LAS VEGAS LIVE CASINO</h2>
+            <p class="text-white text-base font-medium mb-4 text-center drop-shadow">Enjoy the thrill of live casino
+              gaming from our best live gaming partners</p>
+            <!-- Add chips/table image if needed -->
+          </div>
+        </div>
+        <!-- Offers Details Card -->
+        <div
+          class="flex-1 relative rounded-2xl overflow-hidden shadow-lg bg-[#2a0a3c] flex flex-col items-center justify-end">
+          <img src="/images/banner 5.jpg" alt="Sweep Las Vegas Offers Details"
+            class="absolute inset-0 w-full h-[500px] object-cover z-0" style="opacity:0.6" />
+          <div class="relative z-10 flex flex-col items-center justify-top h-[500px] p-8">
+            <h2 class="text-yellow-400 text-2xl font-extrabold mb-2 text-center drop-shadow-lg uppercase">SWEEP LAS
+              VEGAS OFFERS DETAILS</h2>
+            <img src="/images/welcome.png" alt="Welcome Sweep Las Vegas" class="w-3/4 max-w-xs mb-2" />
+            <!-- Add more details if needed -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Trending Games Section -->
+      <div class="w-full mb-8">
+        <div class="flex items-center justify-between px-6 mb-3">
+          <div class="flex items-center">
+            <img src="/images/icons/game-category-6.svg" alt="Trending" class="w-90 h-5" />
+            <h3 class="text-white text-lg font-semibold">Trending Games</h3>
+            <button
+              class="bg-[#ffd700] text-[#a84e1c] font-bold px-3 py-1 ml-2 rounded-full text-xs hover:bg-[#ff9900] transition">View
+              All</button>
+          </div>
+          <div class="flex flex-rows items-center gap-2">
+            <div class="bg-[#ffd700] px-2 py-1 rounded-full"><img src="images/icons/arrow-left.svg"></div>
+            <div class="bg-[#ffd700] px-2 py-1 rounded-full"><img src="images/icons/arrow-right.svg"></div>
+          </div>
+        </div>
+        <div class="flex justify-around gap-6 overflow-x-auto px-6">
+
+          <div class="flex flex-col items-center">
+            <img src="/images/trending-games/dog-house.png" alt="Dog House"
+              class="w-[200px] h-[120px] rounded-xl object-cover shadow-lg mb-2" />
+            <button
+              class="bg-gradient-to-r from-[#ff9900] to-[#ff4e50] text-white font-semibold px-6 py-1 rounded-full mt-1">Play</button>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="/images/trending-games/sugar-rush.png" alt="Sugar Rush"
+              class="w-[200px] h-[120px] rounded-xl object-cover shadow-lg mb-2" />
+            <button
+              class="bg-gradient-to-r from-[#ff9900] to-[#ff4e50] text-white font-semibold px-6 py-1 rounded-full mt-1">Play</button>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="/images/trending-games/shining-hot-100.jpg" alt="Shining Hot 100"
+              class="w-[200px] h-[120px] rounded-xl object-cover shadow-lg mb-2" />
+            <button
+              class="bg-gradient-to-r from-[#ff9900] to-[#ff4e50] text-white font-semibold px-6 py-1 rounded-full mt-1">Play</button>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="/images/trending-games/candy-crush.png" alt="Candy Crush Saga"
+              class="w-[200px] h-[120px] rounded-xl object-cover shadow-lg mb-2" />
+            <button
+              class="bg-gradient-to-r from-[#ff9900] to-[#ff4e50] text-white font-semibold px-6 py-1 rounded-full mt-1">Play</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Top Games Section -->
+      <div class="w-full mb-8">
+        <div class="flex items-center justify-between px-6 mb-3">
+          <div class="flex items-center">
+            <img src="/images/icons/game-category-7.svg" alt="Top Games" class="w-90 h-5" />
+            <h3 class="text-white text-lg font-semibold">Top Games</h3>
+            <button
+              class="bg-[#ffd700] text-[#a84e1c] font-bold px-3 py-1 ml-2 rounded-full text-xs hover:bg-[#ff9900] transition">View
+              All</button>
+          </div>
+          <div class="flex flex-rows items-center gap-2">
+            <div class="bg-[#ffd700] px-2 py-1 rounded-full"><img src="images/icons/arrow-left.svg"></div>
+            <div class="bg-[#ffd700] px-2 py-1 rounded-full"><img src="images/icons/arrow-right.svg"></div>
+          </div>
+        </div>
+        <div class="flex gap-6 overflow-x-auto justify-around px-6">
+          <!-- Example Top Game Card -->
+          <div class="min-w-[140px] flex flex-col items-center">
+            <img src="/images/top-games/game-1.jpg" alt="Alien Fruits"
+              class="w-[190px] h-[200px] rounded-xl object-cover shadow-lg mb-2" />
+            <span class="text-white font-semibold text-sm text-center">ALIEN FRUITS</span>
+          </div>
+          <div class="min-w-[140px] flex flex-col items-center">
+            <img src="/images/top-games/game-2.png" alt="Treasure Cleopatra"
+              class="w-[190px] h-[200px] rounded-xl object-cover shadow-lg mb-2" />
+            <span class="text-white font-semibold text-sm text-center">TREASURE CLEOPATRA</span>
+          </div>
+          <div class="min-w-[140px] flex flex-col items-center">
+            <img src="/images/top-games/game-3.png" alt="Mardi Grass Queen"
+              class="w-[190px] h-[200px] rounded-xl object-cover shadow-lg mb-2" />
+            <span class="text-white font-semibold text-sm text-center">Mardi Grass Queen</span>
+          </div>
+          <div class="min-w-[140px] flex flex-col items-center">
+            <img src="/images/top-games/game-4.png" alt="The Dog House"
+              class="w-[190px] h-[200px] rounded-xl object-cover shadow-lg mb-2" />
+            <span class="text-white font-semibold text-sm text-center">The Dog House</span>
+          </div>
+          <div class="min-w-[140px] flex flex-col items-center">
+            <img src="/images/top-games/game-5.jpg" alt="Hum Slots Sil"
+              class="w-[190px] h-[200px] rounded-xl object-cover shadow-lg mb-2" />
+            <span class="text-white font-semibold text-sm text-center">Hum Slots Sil</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Classic Games Section -->
+      <div class="w-full mb-10">
+        <div class="flex items-center justify-between px-6 mb-3">
+          <div class="flex items-center">
+            <img src="/images/icons/game-category-8.svg" alt="Classic Games" class="w-90 h-5" />
+            <h3 class="text-white text-lg font-semibold">Classic Games</h3>
+            <button
+              class="bg-[#ffd700] text-[#a84e1c] font-bold px-3 py-1 ml-2 rounded-full text-xs hover:bg-[#ff9900] transition">View
+              All</button>
+          </div>
+          <div class="flex flex-rows items-center gap-2">
+            <div class="bg-[#ffd700] px-2 py-1 rounded-full"><img src="images/icons/arrow-left.svg"></div>
+            <div class="bg-[#ffd700] px-2 py-1 rounded-full"><img src="images/icons/arrow-right.svg"></div>
+          </div>
+        </div>
+        <div class="flex gap-6 overflow-x-auto justify-around px-6">
+          <!-- Example Classic Game Card -->
+          <div class="min-w-[140px] flex flex-col items-center">
+            <img src="/images/classic-games/game-1.png" alt="Panda Gold"
+              class="w-[150px] h-[200px] rounded-xl object-cover shadow-lg mb-2" />
+            <span class="text-white font-semibold text-sm text-center">PANDA GOLD</span>
+          </div>
+          <div class="min-w-[140px] flex flex-col items-center">
+            <img src="/images/classic-games/game-2.png" alt="Kawaii Princess"
+              class="w-[150px] h-[200px] rounded-xl object-cover shadow-lg mb-2" />
+            <span class="text-white font-semibold text-sm text-center">KAWAII PRINCESS</span>
+          </div>
+          <div class="min-w-[140px] flex flex-col items-center">
+            <img src="/images/classic-games/game-3.png" alt="Tublin Dublin"
+              class="w-[150px] h-[200px] rounded-xl object-cover shadow-lg mb-2" />
+            <span class="text-white font-semibold text-sm text-center">Tublin Dublin</span>
+          </div>
+          <div class="min-w-[140px] flex flex-col items-center">
+            <img src="/images/classic-games/game-4.png" alt="Pop Lollipop"
+              class="w-[150px] h-[200px] rounded-xl object-cover shadow-lg mb-2" />
+            <span class="text-white font-semibold text-sm text-center">Pop Lollipop</span>
+          </div>
+          <div class="min-w-[140px] flex flex-col items-center">
+            <img src="/images/classic-games/game-5.png" alt="Sweet spotz"
+              class="w-[150px] h-[200px] rounded-xl object-cover shadow-lg mb-2" />
+            <span class="text-white font-semibold text-sm text-center">Sweet spotz</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more sections as per your Figma design -->
+
+      <!-- Footer Section -->
+      <footer class="w-full pt-10 pb-4 mt-auto"
+        style="background: url('images/banner_1/coins.png'); opacity: 0.6; background-size: cover; background-position: 10%;">
+        <div class="flex flex-col items-center">
+          <!-- Logo -->
+          <img src="/images/capture.png" alt="Sweep Las Vegas Logo" class="w-[180px] h-[120px] object-contain mb-2" />
+          <!-- Top Links -->
+          <div class="flex flex-wrap justify-center gap-6 text-white font-medium mb-4">
+            <a href="#" class="hover:underline">About Us</a>
+            <span class="mx-2">•</span>
+            <a href="#" class="hover:underline">Contact Us</a>
+            <span class="mx-2">•</span>
+            <a href="#" class="hover:underline">FAQ</a>
+            <span class="mx-2">•</span>
+            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+          </div>
+          <hr class="w-4/5 border-t border-[#ffd700] opacity-30 mb-6" />
+          <!-- Footer Columns -->
+          <div class="flex flex-wrap justify-center gap-16 w-full max-w-5xl text-white mb-6">
+            <!-- Providers -->
+            <div>
+              <h4 class="text-yellow-400 font-bold mb-2">Providers</h4>
+              <ul class="space-y-1 text-sm">
+                <li><a href="#" class="hover:underline">Pragmatic Play</a></li>
+                <li><a href="#" class="hover:underline">Pragmatic Play</a></li>
+                <li><a href="#" class="hover:underline">Pragmatic Play</a></li>
+                <li><a href="#" class="hover:underline">Pragmatic Play</a></li>
+                <li><a href="#" class="hover:underline">Pragmatic Play</a></li>
+                <li><a href="#" class="hover:underline">Pragmatic Play</a></li>
+              </ul>
+            </div>
+            <!-- Links -->
+            <div>
+              <h4 class="text-yellow-400 font-bold mb-2">Links</h4>
+              <ul class="space-y-1 text-sm">
+                <li><a href="#" class="hover:underline">About Us</a></li>
+                <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                <li><a href="#" class="hover:underline">Terms &amp; Conditions</a></li>
+                <li><a href="#" class="hover:underline">How to Play</a></li>
+                <li><a href="#" class="hover:underline">Player Safety</a></li>
+                <li><a href="#" class="hover:underline">Customer Support</a></li>
+              </ul>
+            </div>
+            <!-- Contact Us -->
+            <div>
+              <h4 class="text-yellow-400 font-bold mb-2">Contact Us</h4>
+              <ul class="space-y-1 text-sm">
+                <li>Support: <a href="mailto:support@sweepslas.com" class="hover:underline">support@sweepslas.com</a>
+                </li>
+                <li>Legal: <a href="mailto:legal@lasvegasaswe.com" class="hover:underline">legal@lasvegasaswe.com</a>
+                </li>
+              </ul>
+              <div class="mt-3">
+                <span class="font-bold text-yellow-400">Follow Us</span>
+                <div class="flex gap-4 mt-2">
+                  <a href="#" class="text-white hover:text-yellow-400 text-xl"><img
+                      src="/images/icons/social-media/icons8-telegram.svg" alt="Telegram" class="w-6 h-6 inline" /></a>
+                  <a href="#" class="text-white hover:text-yellow-400 text-xl"><img
+                      src="/images/icons/social-media/icons8-instagram.svg" alt="Instagram"
+                      class="w-6 h-6 inline" /></a>
+                  <a href="#" class="text-white hover:text-yellow-400 text-xl"><img
+                      src="/images/icons/social-media/icons8-whatsapp.svg" alt="WhatsApp" class="w-6 h-6 inline" /></a>
+                  <a href="#" class="text-white hover:text-yellow-400 text-xl"><img
+                      src="/images/icons/social-media/icons8-facebook.svg" alt="Facebook" class="w-6 h-6 inline" /></a>
+                  <a href="#" class="text-white hover:text-yellow-400 text-xl"><img
+                      src="/images/icons/social-media/icons8-twitter.svg" alt="Twitter" class="w-6 h-6 inline" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Copyright -->
+          <div class="w-full text-center text-white text-xs border-t border-[#a84e1c] pt-3 opacity-80">
+            ©2025 Sweep Las Vegas All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>
