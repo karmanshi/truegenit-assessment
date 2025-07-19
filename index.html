@@ -283,142 +283,198 @@
       </div>
 
       <!-- Live Casino Carousel -->
-      <div class="w-full px-1.5 md:px-6 mt-4">
-          <!-- Header Row -->
-          <div class="flex items-center justify-around px-3 md:px-6 mb-3">
-            <img src="images/icons/live-casino-icon.svg" alt="Live Casino" class="w-6 h-6 mr-2" />
-            <span class="text-white text-sm md:text-lg font-bold">Live Casino</span>
-            <div class="ml-auto flex items-center gap-1">
-              <button
-                class="bg-[#ffd700] hover:bg-[#ff9900] text-[#4b0257] rounded-full w-7 h-7 flex items-center justify-center shadow transition">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                  <path d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                class="bg-[#ffd700] hover:bg-[#ff9900] text-[#4b0257] rounded-full w-7 h-7 flex items-center justify-center shadow transition">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                  <path d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
+      <div class="w-full px-1.5 md:px-6 my-6">
+        <!-- Header Row -->
+        <div class="flex items-center justify-around px-3 md:px-6 mb-3">
+          <img src="images/icons/live-casino-icon.svg" alt="Live Casino" class="w-6 h-6 mr-2" />
+          <span class="text-white text-sm md:text-lg font-bold">Live Casino</span>
+          <div class="ml-auto flex items-center gap-1">
+            <button
+              class="bg-[#ffd700] hover:bg-[#ff9900] text-[#4b0257] rounded-full w-7 h-7 flex items-center justify-center shadow transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              class="bg-[#ffd700] hover:bg-[#ff9900] text-[#4b0257] rounded-full w-7 h-7 flex items-center justify-center shadow transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
-          <!-- Carousel -->
+        </div>
+        <!-- Carousel -->
+        <div
+          class="flex gap-[10px] md:gap-[18px] overflow-x-auto scrollbar-thin scrollbar-thumb-[#ffd700]/40 pb-2 justify-around">
+          <!-- Winner Card Example -->
           <div
-            class="flex gap-[10px] md:gap-[18px] overflow-x-auto scrollbar-thin scrollbar-thumb-[#ffd700]/40 pb-2 justify-around">
-            <!-- Winner Card Example -->
-            <div
-              class="flex-shrink-0 w-[145px] h-[66px] md:w-[180px] md:h-[74px] rounded-[7px] shadow border border-[#a86b2d] p-1.5 flex flex-col justify-between relative"
-              style="background: radial-gradient(149.64% 102.93% at 25.09% -11.17%, rgba(254,183,10,0.86) 0%, #2D0042 51.93%, rgba(214,1,7,0.71) 100%);">
-              <div class="flex items-center gap-1.5">
-                <img src="images/king-sky.png" alt="Game"
-                  class="w-8 h-8 md:w-9 md:h-9 rounded-[4px] object-cover border border-[#fff3]" />
-                <div class="flex flex-col leading-tight">
-                  <span class="text-[11px] md:text-[13px] text-white font-semibold">Super GC win</span>
-                  <span class="text-[10px] md:text-[12px] text-white flex items-center gap-1">
-                    User01:
-                    <svg class="inline w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <circle cx="10" cy="10" r="10" />
-                    </svg>
-                    <span class="text-yellow-400 font-bold">127,0000</span>
-                  </span>
-                </div>
-              </div>
-              <div class="flex justify-between items-end mt-0.5">
-                <span class="text-[9px] md:text-[11px] text-white">on a GC 3000 spin</span>
-                <span class="text-[9px] md:text-[11px] text-[#ff4e50] font-bold">Now</span>
+            class="flex-shrink-0 w-[145px] h-[66px] md:w-[180px] md:h-[74px] rounded-[7px] shadow border border-[#a86b2d] p-1.5 flex flex-col justify-between relative"
+            style="background: radial-gradient(149.64% 102.93% at 25.09% -11.17%, rgba(254,183,10,0.86) 0%, #2D0042 51.93%, rgba(214,1,7,0.71) 100%);">
+            <div class="flex items-center gap-1.5">
+              <img src="images/king-sky.png" alt="Game"
+                class="w-8 h-8 md:w-9 md:h-9 rounded-[4px] object-cover border border-[#fff3]" />
+              <div class="flex flex-col leading-tight">
+                <span class="text-[11px] md:text-[13px] text-white font-semibold">Super GC win</span>
+                <span class="text-[10px] md:text-[12px] text-white flex items-center gap-1">
+                  User01:
+                  <svg class="inline w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <circle cx="10" cy="10" r="10" />
+                  </svg>
+                  <span class="text-yellow-400 font-bold">127,0000</span>
+                </span>
               </div>
             </div>
-            <div
-              class="flex-shrink-0 w-[145px] h-[66px] md:w-[180px] md:h-[74px] rounded-[7px] shadow border border-[#a86b2d] p-1.5 flex flex-col justify-between relative"
-              style="background: radial-gradient(149.64% 102.93% at 25.09% -11.17%, rgba(254,183,10,0.86) 0%, #2D0042 51.93%, rgba(214,1,7,0.71) 100%);">
-              <div class="flex items-center gap-1.5">
-                <img src="images/king-sky.png" alt="Game"
-                  class="w-8 h-8 md:w-9 md:h-9 rounded-[4px] object-cover border border-[#fff3]" />
-                <div class="flex flex-col leading-tight">
-                  <span class="text-[11px] md:text-[13px] text-white font-semibold">Super GC win</span>
-                  <span class="text-[10px] md:text-[12px] text-white flex items-center gap-1">
-                    User01:
-                    <svg class="inline w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <circle cx="10" cy="10" r="10" />
-                    </svg>
-                    <span class="text-yellow-400 font-bold">127,0000</span>
-                  </span>
-                </div>
-              </div>
-              <div class="flex justify-between items-end mt-0.5">
-                <span class="text-[9px] md:text-[11px] text-white">on a GC 3000 spin</span>
-                <span class="text-[9px] md:text-[11px] text-[#ff4e50] font-bold">Now</span>
-              </div>
-            </div>
-            <div
-              class="flex-shrink-0 w-[145px] h-[66px] md:w-[180px] md:h-[74px] rounded-[7px] shadow border border-[#a86b2d] p-1.5 flex flex-col justify-between relative"
-              style="background: radial-gradient(149.64% 102.93% at 25.09% -11.17%, rgba(254,183,10,0.86) 0%, #2D0042 51.93%, rgba(214,1,7,0.71) 100%);">
-              <div class="flex items-center gap-1.5">
-                <img src="images/king-sky.png" alt="Game"
-                  class="w-8 h-8 md:w-9 md:h-9 rounded-[4px] object-cover border border-[#fff3]" />
-                <div class="flex flex-col leading-tight">
-                  <span class="text-[11px] md:text-[13px] text-white font-semibold">Super GC win</span>
-                  <span class="text-[10px] md:text-[12px] text-white flex items-center gap-1">
-                    User01:
-                    <svg class="inline w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <circle cx="10" cy="10" r="10" />
-                    </svg>
-                    <span class="text-yellow-400 font-bold">127,0000</span>
-                  </span>
-                </div>
-              </div>
-              <div class="flex justify-between items-end mt-0.5">
-                <span class="text-[9px] md:text-[11px] text-white">on a GC 3000 spin</span>
-                <span class="text-[9px] md:text-[11px] text-[#ff4e50] font-bold">Now</span>
-              </div>
-            </div>
-            <div
-              class="flex-shrink-0 w-[145px] h-[66px] md:w-[180px] md:h-[74px] rounded-[7px] shadow border border-[#a86b2d] p-1.5 flex flex-col justify-between relative"
-              style="background: radial-gradient(149.64% 102.93% at 25.09% -11.17%, rgba(254,183,10,0.86) 0%, #2D0042 51.93%, rgba(214,1,7,0.71) 100%);">
-              <div class="flex items-center gap-1.5">
-                <img src="images/king-sky.png" alt="Game"
-                  class="w-8 h-8 md:w-9 md:h-9 rounded-[4px] object-cover border border-[#fff3]" />
-                <div class="flex flex-col leading-tight">
-                  <span class="text-[11px] md:text-[13px] text-white font-semibold">Super GC win</span>
-                  <span class="text-[10px] md:text-[12px] text-white flex items-center gap-1">
-                    User01:
-                    <svg class="inline w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <circle cx="10" cy="10" r="10" />
-                    </svg>
-                    <span class="text-yellow-400 font-bold">127,0000</span>
-                  </span>
-                </div>
-              </div>
-              <div class="flex justify-between items-end mt-0.5">
-                <span class="text-[9px] md:text-[11px] text-white">on a GC 3000 spin</span>
-                <span class="text-[9px] md:text-[11px] text-[#ff4e50] font-bold">Now</span>
-              </div>
-            </div>
-            <div
-              class="flex-shrink-0 w-[145px] h-[66px] md:w-[180px] md:h-[74px] rounded-[7px] shadow border border-[#a86b2d] p-1.5 flex flex-col justify-between relative"
-              style="background: radial-gradient(149.64% 102.93% at 25.09% -11.17%, rgba(254,183,10,0.86) 0%, #2D0042 51.93%, rgba(214,1,7,0.71) 100%);">
-              <div class="flex items-center gap-1.5">
-                <img src="images/king-sky.png" alt="Game"
-                  class="w-8 h-8 md:w-9 md:h-9 rounded-[4px] object-cover border border-[#fff3]" />
-                <div class="flex flex-col leading-tight">
-                  <span class="text-[11px] md:text-[13px] text-white font-semibold">Super GC win</span>
-                  <span class="text-[10px] md:text-[12px] text-white flex items-center gap-1">
-                    User01:
-                    <svg class="inline w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <circle cx="10" cy="10" r="10" />
-                    </svg>
-                    <span class="text-yellow-400 font-bold">127,0000</span>
-                  </span>
-                </div>
-              </div>
-              <div class="flex justify-between items-end mt-0.5">
-                <span class="text-[9px] md:text-[11px] text-white">on a GC 3000 spin</span>
-                <span class="text-[9px] md:text-[11px] text-[#ff4e50] font-bold">Now</span>
-              </div>
+            <div class="flex justify-between items-end mt-0.5">
+              <span class="text-[9px] md:text-[11px] text-white">on a GC 3000 spin</span>
+              <span class="text-[9px] md:text-[11px] text-[#ff4e50] font-bold">Now</span>
             </div>
           </div>
+          <div
+            class="flex-shrink-0 w-[145px] h-[66px] md:w-[180px] md:h-[74px] rounded-[7px] shadow border border-[#a86b2d] p-1.5 flex flex-col justify-between relative"
+            style="background: radial-gradient(149.64% 102.93% at 25.09% -11.17%, rgba(254,183,10,0.86) 0%, #2D0042 51.93%, rgba(214,1,7,0.71) 100%);">
+            <div class="flex items-center gap-1.5">
+              <img src="images/king-sky.png" alt="Game"
+                class="w-8 h-8 md:w-9 md:h-9 rounded-[4px] object-cover border border-[#fff3]" />
+              <div class="flex flex-col leading-tight">
+                <span class="text-[11px] md:text-[13px] text-white font-semibold">Super GC win</span>
+                <span class="text-[10px] md:text-[12px] text-white flex items-center gap-1">
+                  User01:
+                  <svg class="inline w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <circle cx="10" cy="10" r="10" />
+                  </svg>
+                  <span class="text-yellow-400 font-bold">127,0000</span>
+                </span>
+              </div>
+            </div>
+            <div class="flex justify-between items-end mt-0.5">
+              <span class="text-[9px] md:text-[11px] text-white">on a GC 3000 spin</span>
+              <span class="text-[9px] md:text-[11px] text-[#ff4e50] font-bold">Now</span>
+            </div>
+          </div>
+          <div
+            class="flex-shrink-0 w-[145px] h-[66px] md:w-[180px] md:h-[74px] rounded-[7px] shadow border border-[#a86b2d] p-1.5 flex flex-col justify-between relative"
+            style="background: radial-gradient(149.64% 102.93% at 25.09% -11.17%, rgba(254,183,10,0.86) 0%, #2D0042 51.93%, rgba(214,1,7,0.71) 100%);">
+            <div class="flex items-center gap-1.5">
+              <img src="images/king-sky.png" alt="Game"
+                class="w-8 h-8 md:w-9 md:h-9 rounded-[4px] object-cover border border-[#fff3]" />
+              <div class="flex flex-col leading-tight">
+                <span class="text-[11px] md:text-[13px] text-white font-semibold">Super GC win</span>
+                <span class="text-[10px] md:text-[12px] text-white flex items-center gap-1">
+                  User01:
+                  <svg class="inline w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <circle cx="10" cy="10" r="10" />
+                  </svg>
+                  <span class="text-yellow-400 font-bold">127,0000</span>
+                </span>
+              </div>
+            </div>
+            <div class="flex justify-between items-end mt-0.5">
+              <span class="text-[9px] md:text-[11px] text-white">on a GC 3000 spin</span>
+              <span class="text-[9px] md:text-[11px] text-[#ff4e50] font-bold">Now</span>
+            </div>
+          </div>
+          <div
+            class="flex-shrink-0 w-[145px] h-[66px] md:w-[180px] md:h-[74px] rounded-[7px] shadow border border-[#a86b2d] p-1.5 flex flex-col justify-between relative"
+            style="background: radial-gradient(149.64% 102.93% at 25.09% -11.17%, rgba(254,183,10,0.86) 0%, #2D0042 51.93%, rgba(214,1,7,0.71) 100%);">
+            <div class="flex items-center gap-1.5">
+              <img src="images/king-sky.png" alt="Game"
+                class="w-8 h-8 md:w-9 md:h-9 rounded-[4px] object-cover border border-[#fff3]" />
+              <div class="flex flex-col leading-tight">
+                <span class="text-[11px] md:text-[13px] text-white font-semibold">Super GC win</span>
+                <span class="text-[10px] md:text-[12px] text-white flex items-center gap-1">
+                  User01:
+                  <svg class="inline w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <circle cx="10" cy="10" r="10" />
+                  </svg>
+                  <span class="text-yellow-400 font-bold">127,0000</span>
+                </span>
+              </div>
+            </div>
+            <div class="flex justify-between items-end mt-0.5">
+              <span class="text-[9px] md:text-[11px] text-white">on a GC 3000 spin</span>
+              <span class="text-[9px] md:text-[11px] text-[#ff4e50] font-bold">Now</span>
+            </div>
+          </div>
+          <div
+            class="flex-shrink-0 w-[145px] h-[66px] md:w-[180px] md:h-[74px] rounded-[7px] shadow border border-[#a86b2d] p-1.5 flex flex-col justify-between relative"
+            style="background: radial-gradient(149.64% 102.93% at 25.09% -11.17%, rgba(254,183,10,0.86) 0%, #2D0042 51.93%, rgba(214,1,7,0.71) 100%);">
+            <div class="flex items-center gap-1.5">
+              <img src="images/king-sky.png" alt="Game"
+                class="w-8 h-8 md:w-9 md:h-9 rounded-[4px] object-cover border border-[#fff3]" />
+              <div class="flex flex-col leading-tight">
+                <span class="text-[11px] md:text-[13px] text-white font-semibold">Super GC win</span>
+                <span class="text-[10px] md:text-[12px] text-white flex items-center gap-1">
+                  User01:
+                  <svg class="inline w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <circle cx="10" cy="10" r="10" />
+                  </svg>
+                  <span class="text-yellow-400 font-bold">127,0000</span>
+                </span>
+              </div>
+            </div>
+            <div class="flex justify-between items-end mt-0.5">
+              <span class="text-[9px] md:text-[11px] text-white">on a GC 3000 spin</span>
+              <span class="text-[9px] md:text-[11px] text-[#ff4e50] font-bold">Now</span>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- game categories tab bar -->
+      <div class="w-full mb-8">
+        <!-- Header Row -->
+        <div class="flex items-center justify-center px-3 md:px-6 mb-3">
+          <img src="images/icons/game-category-8.svg" alt="Categories" class="w-90 h-5 mr-2" />
+          <span class="text-white text-[15px] md:text-lg font-bold tracking-wide whitespace-nowrap">
+            <span class="text-[#ffd700]">GAME</span>
+            <span class="text-[#ffb700]"> CATEGORIES </span>
+            <span class="text-[#ffd700]">TAB BAR</span>
+          </span>
+        </div>
+        <!-- Tab Bar Row -->
+        <div
+          class="flex flex-wrap md:flex-nowrap items-center border-y border-[#a86b2d] justify-center gap-x-2 md:gap-x-8 gap-y-2 py-2 md:py-3"
+          style="
+          min-height:38px;
+          background: linear-gradient(90.53deg, #450032 6.15%, #9A0104 47.51%, #450033 92.75%);">
+          <!-- Tab: Live Casino -->
+          <div class="flex flex-col md:flex-row items-center gap-0 text-white text-sm">
+            <img src="images/icons/game-category-2.svg" class="w-90 h-5 mx-0 px-0" alt="Live Casino" />
+            <span class="mx-0 px-0">Live Casino</span>
+          </div>
+          <!-- Tab: New Games -->
+          <div class="flex flex-col md:flex-row items-center gap-0 text-white text-sm">
+            <img src="images/icons/game-category-3.svg" class="w-90 h-5 mx-0 px-0" alt="New Games" />
+            <span class="mx-0 px-0">New games</span>
+          </div>
+          <!-- Tab: Slots -->
+          <div class="flex flex-col md:flex-row items-center gap-0 text-white text-sm">
+            <img src="images/icons/game-category-4.svg" class="w-90 h-5 mx-0 px-0" alt="Popular Games" />
+            <span class="mx-0 px-0">Slots</span>
+          </div>
+          <!-- Tab: Popular Games -->
+          <div class="flex flex-col md:flex-row items-center gap-0 text-white text-sm">
+            <img src="images/icons/game-category-5.svg" class="w-90 h-5 mx-0 px-0" alt="Popular Games" />
+            <span class="mx-0 px-0">Popular Games</span>
+          </div>
+          <!-- Tab: Jackpot Play -->
+          <div class="flex flex-col md:flex-row items-center gap-0 text-white text-sm">
+            <img src="images/icons/game-category-6.svg" class="w-90 h-5 mx-0 px-0" alt="Jackpot Play" />
+            <span class="mx-0 px-0">Jackpot Play</span>
+          </div>
+          <!-- Tab: Top Games -->
+          <div class="flex flex-col md:flex-row items-center gap-0 text-white text-sm">
+            <img src="images/icons/game-category-7.svg" class="w-90 h-5 mx-0 px-0" alt="Top Games" />
+            <span class="mx-0 px-0">Top games</span>
+          </div>
+          <!-- Tab: Classic Games -->
+          <div class="flex flex-col md:flex-row items-center gap-0 text-white text-sm">
+            <img src="images/icons/game-category-8.svg" class="w-90 h-5 mx-0 px-0" alt="Top Games" />
+            <span class="mx-0 px-0">Classic Games</span>
+          </div>
+        </div>
+      </div>
+
 
       <!-- Live Casino Section -->
       <div class="w-full mb-8">
@@ -446,7 +502,8 @@
         </div>
         <div class="flex gap-6 overflow-x-auto justify-around px-3 md:px-6">
           <!-- Example Top Game Card -->
-          <div class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg">
+          <div
+            class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg transition-transform duration-700 hover:rotate-[360deg]">
             <img src="/images/live-casino/pic-1.png" alt="Alien Fruits"
               class="w-[180px] h-[200px] rounded-xl object-fit mb-2" />
             <div class="flex flex-col items-center text-white text-sm">
@@ -454,7 +511,8 @@
               <span>10-Ruby</span>
             </div>
           </div>
-          <div class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg">
+          <div
+            class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg transition-transform duration-700 hover:rotate-[360deg]">
             <img src="/images/live-casino/pic-2.png" alt="Alien Fruits"
               class="w-[180px] h-[200px] rounded-xl object-fit mb-2" />
             <div class="flex flex-col items-center text-white text-sm">
@@ -462,7 +520,8 @@
               <span>10-Ruby</span>
             </div>
           </div>
-          <div class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg">
+          <div
+            class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg transition-transform duration-700 hover:rotate-[360deg]">
             <img src="/images/live-casino/pic-3.png" alt="Alien Fruits"
               class="w-[150px] h-[200px] rounded-xl object-fit mb-2" />
             <div class="flex flex-col items-center text-white text-sm">
@@ -470,7 +529,8 @@
               <span>10-Ruby</span>
             </div>
           </div>
-          <div class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg">
+          <div
+            class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg transition-transform duration-700 hover:rotate-[360deg]">
             <img src="/images/live-casino/pic-4.png" alt="Alien Fruits"
               class="w-[180px] h-[200px] rounded-xl object-fit mb-2" />
             <div class="flex flex-col items-center text-white text-sm">
@@ -478,7 +538,8 @@
               <span>10-Ruby</span>
             </div>
           </div>
-          <div class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg">
+          <div
+            class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg transition-transform duration-700 hover:rotate-[360deg]">
             <img src="/images/live-casino/pic-5.png" alt="Alien Fruits"
               class="w-[180px] h-[200px] rounded-xl object-fit mb-2" />
             <div class="flex flex-col items-center text-white text-sm">
@@ -486,10 +547,13 @@
               <span>10-Ruby</span>
             </div>
           </div>
+
+
         </div>
         <div class="flex gap-6 overflow-x-auto justify-around px-3 md:px-6 mt-5">
           <!-- Example Top Game Card -->
-          <div class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg">
+          <div
+            class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg transition-transform duration-700 hover:rotate-[360deg]">
             <img src="/images/live-casino/pic-6.png" alt="Alien Fruits"
               class="w-[180px] h-[200px] rounded-xl object-fit mb-2" />
             <div class="flex flex-col items-center text-white text-sm">
@@ -497,7 +561,8 @@
               <span>10-Ruby</span>
             </div>
           </div>
-          <div class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg">
+          <div
+            class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg transition-transform duration-700 hover:rotate-[360deg]">
             <img src="/images/live-casino/pic-7.png" alt="Alien Fruits"
               class="w-[180px] h-[200px] rounded-xl object-fit mb-2" />
             <div class="flex flex-col items-center text-white text-sm">
@@ -505,7 +570,8 @@
               <span>10-Ruby</span>
             </div>
           </div>
-          <div class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg">
+          <div
+            class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg transition-transform duration-700 hover:rotate-[360deg]">
             <img src="/images/live-casino/pic-8.png" alt="Alien Fruits"
               class="w-[180px] h-[200px] rounded-xl object-fit mb-2" />
             <div class="flex flex-col items-center text-white text-sm">
@@ -513,7 +579,8 @@
               <span>10-Ruby</span>
             </div>
           </div>
-          <div class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg">
+          <div
+            class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg transition-transform duration-700 hover:rotate-[360deg]">
             <img src="/images/live-casino/pic-9.png" alt="Alien Fruits"
               class="w-[180px] h-[200px] rounded-xl object-fit mb-2" />
             <div class="flex flex-col items-center text-white text-sm">
@@ -521,7 +588,8 @@
               <span>10-Ruby</span>
             </div>
           </div>
-          <div class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg">
+          <div
+            class="min-w-[150px] flex flex-col items-center border border-2 border-[#ffd700] rounded-lg transition-transform duration-700 hover:rotate-[360deg]">
             <img src="/images/live-casino/pic-10.png" alt="Alien Fruits"
               class="w-[180px] h-[200px] rounded-xl object-fit mb-2" />
             <div class="flex flex-col items-center text-white text-sm">
