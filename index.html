@@ -146,11 +146,17 @@
       <!-- Banners Section -->
       <div class="flex flex-col lg:flex-row gap-4 md:gap-6 px-3 md:px-6 mb-8 w-full">
         <!-- Banner 1 -->
-        <div class="flex-1 relative rounded-2xl overflow-hidden shadow-lg min-w-0 mb-4 lg:mb-0">
-          <img src="/images/banner_1/banner.jpg" alt="Spin the Wheel Banner"
-            class="w-full h-[180px] md:h-[300px] object-cover" />
+        <div class="flex-1 relative rounded-2xl overflow-hidden shadow-lg min-w-0 mb-4 lg:mb-0"
+          style="
+          background: url('images/banner_1/banner.jpg');
+          background-size: cover;
+          ">
+          <img src="/images/banner_1/people.png" alt="Spin the Wheel Banner"
+            class="absolute bottom-0 left-0 w-[70%]" />
+          <img src="/images/banner_1/coins.png" alt="Spin the Wheel Banner"
+            class="absolute bottom-0 right-0 w-[70%]" />
           <div
-            class="absolute inset-0 flex flex-col justify-center items-start p-4 md:p-8 bg-gradient-to-r from-black/60 to-transparent">
+            class="absolute inset-0 flex flex-col justify-center items-end p-4 md:p-8 bg-gradient-to-r from-black/60 to-transparent">
             <h2 class="text-white text-xl md:text-3xl font-extrabold mb-2 drop-shadow-lg">SPIN THE WHEEL<br>&amp; WIN
               BIG! <span class="ml-2">🎉</span></h2>
             <p class="text-[#ff4e50] text-base md:text-lg font-bold mb-1 drop-shadow">Play for Free</p>
